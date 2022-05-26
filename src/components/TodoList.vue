@@ -9,6 +9,7 @@
 <script>
 import TodoItem from "@/components/TodoItem"
 export default {
+    props: ['todos'],
     components: {
         TodoItem
     }
