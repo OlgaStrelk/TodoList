@@ -1,9 +1,7 @@
 <template>
     <div>
-        <ul>
-            <TodoItem 
-            v-for="item of todos"
-            v-bind:todo="item"/>
+        <ul class="list">
+            <TodoItem v-for="item of todos" v-bind:todo="item" />
         </ul>
     </div>
 </template>
@@ -16,3 +14,13 @@ export default {
         TodoItem
     }
 }</script>
+
+<style scoped>
+.list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    max-width: 400px;
+    align-self: center;
+}
+</style>
