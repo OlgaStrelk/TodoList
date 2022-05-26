@@ -1,7 +1,15 @@
 <template>
     <div>
         <ul>
-            <li>1. доделать проект 11</li>
+            <TodoItem />
         </ul>
     </div>
 </template>
+
+<script>
+import TodoItem from "@/components/TodoItem"
+export default {
+    components: {
+        TodoItem
+    }
+}</script>
