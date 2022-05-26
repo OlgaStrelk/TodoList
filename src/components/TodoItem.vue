@@ -1,5 +1,7 @@
 <template>
-    <li>{{ todo.title }}</li>
+    <li>
+        <span><input type="checkbox"><strong>{{ todo.id }}</strong>{{ todo.title }}</span><button>&times;</button>
+    </li>
 </template>
 
 <script>
