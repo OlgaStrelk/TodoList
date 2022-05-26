@@ -1,17 +1,18 @@
 <template>
-    <li>обнять Руфь</li>
+    <li>{{ todo.title }}</li>
 </template>
 
 <script>
-// import TodoList from "@/components/TodoList"
-// export default {
-//   name: 'App',
-//   components: {
-//     TodoList
-//   }
-// }
+export default {
+    name: 'App',
+    props: {
+        todo: {
+            type: Object,
+            required: true
+        }
+    }
+}
 </script>
 
 <style>
-
 </style>
