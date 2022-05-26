@@ -1,7 +1,7 @@
 <template>
     <li class="task">
-        <span v-bind:class="{done: todo.completed}">
-            <input class="input" type="checkbox">
+        <span v-bind:class="{ done: todo.completed }">
+            <input class="input" type="checkbox" v-on:change="todo.completed = !todo.completed">
             <strong class="count">{{ todo.id }}</strong>
             {{ todo.title }}
         </span>
