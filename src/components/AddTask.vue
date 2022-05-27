@@ -11,7 +11,16 @@ export default {
 
     methods: {
         onSubmit() {
-            console.log(this.title)
+            if (this.title.trim()) {
+                const newTask = {
+                    id: Date.now(),
+                    title: this.title,
+                    completed: false
+                }
+
+                this.$emit('add-task', newTask)
+                this.title = ''
+            }
         }
     },
     components: {
@@ -31,6 +40,7 @@ export default {
     margin: 0;
     width: 290px;
     background: white;
+    color: black;
     border: none;
     border-radius: 5px;
 
