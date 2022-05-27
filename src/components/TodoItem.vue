@@ -1,11 +1,10 @@
 <template>
     <li class="task">
-        <span v-bind:class="{ done: todo.completed }">
-            <input class="input" type="checkbox" v-on:change="todo.completed = !todo.completed">
-            <strong class="count">{{ todo.id }}</strong>
+        <span class="task-box" v-bind:class="{ done: todo.completed }">
+            <input type="checkbox" v-on:change="todo.completed = !todo.completed">
             {{ todo.title }}
         </span>
-        <button class="remove-button">&times;</button>
+        <button class="remove-button" v-on:click="$emit('remove-task', todo.id)">&times;</button>
     </li>
 </template>
 
@@ -23,14 +22,27 @@ export default {
 
 <style scoped>
 .task {
-    border: 1px solid #ccc;
+    height: 45px;
+    font-weight: 400;
+    border: 1px solid grey;
+    border-radius: 5px;
     display: flex;
     justify-content: space-between;
     padding: 5px 20px;
     margin-bottom: 10px;
 }
 
+.task-box {
+    font-weight: bold;
+    font-size: 17px;
+    margin: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
 .remove-button {
+    margin: 0;
     font-size: 30px;
     padding: 0;
     top: 8px;
@@ -47,9 +59,13 @@ export default {
 
 input {
     margin-right: 10px;
+    height: 15px;
+    cursor: pointer;
+    background: white;
 }
 
 .done {
     text-decoration: line-through;
+    opacity: 0.6;
 }
 </style>
