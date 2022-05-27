@@ -1,20 +1,21 @@
 <template>
-    <form class="form-add-task">
+    <form @submit.prevent="onSubmit" class="form-add-task">
         <input type="text" class="form-input">
         <button class="submit-button" type="submit">Сохранить</button>
     </form>
 </template>
 
 <script>
-// export default {
+export default {
 
-// },
-// methods: {
-
-// },
-// components: {
-// }
-
+    methods: {
+onSubmit() {
+    console.log("qq")
+}
+    },
+    components: {
+    }
+}
 </script>
 
 <style>

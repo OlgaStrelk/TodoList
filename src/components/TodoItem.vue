@@ -1,6 +1,7 @@
 <template>
     <li class="task">
         <span class="task-box" v-bind:class="{ done: todo.completed }">
+
             <input type="checkbox" v-on:change="todo.completed = !todo.completed">
             {{ todo.title }}
         </span>
@@ -58,11 +59,28 @@ export default {
 }
 
 input {
-    margin-right: 10px;
-    height: 15px;
+    margin-right: 40px;
     cursor: pointer;
-    background: white;
+    width: 0;
 }
+
+
+input::before {
+    margin-top: 2px;
+    display: block;
+    width: 11px;
+    height: 11px;
+    border: 1px solid #808080;
+    border-radius: 50%;
+    content: "";
+    background: #FFF;
+}
+
+input:checked::before {
+    content: "";
+    background: grey;
+
+ } 
 
 .done {
     text-decoration: line-through;
