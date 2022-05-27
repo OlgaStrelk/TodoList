@@ -1,17 +1,18 @@
 <template>
     <form @submit.prevent="onSubmit" class="form-add-task">
-        <input type="text" class="form-input">
+        <input type="text" class="form-input" v-model="title">
         <button class="submit-button" type="submit">Сохранить</button>
     </form>
 </template>
 
 <script>
 export default {
+    data() { return { title: '' } },
 
     methods: {
-onSubmit() {
-    console.log("qq")
-}
+        onSubmit() {
+            console.log(this.title)
+        }
     },
     components: {
     }

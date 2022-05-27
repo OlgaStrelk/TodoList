@@ -13,7 +13,7 @@ export default {
   data() {
     return {
       posts: [
-        { id: 1, title: 'Проект 11', completed: false },
+        { id: 1, title: 'Проект 11 поцеловать Руфь и Цолака обняться станцевать вместе', completed: false },
         { id: 2, title: 'Проект 12', completed: false },
         { id: 3, title: 'Тренажер', completed: false },
         { id: 1, title: 'Проект 11', completed: false },
