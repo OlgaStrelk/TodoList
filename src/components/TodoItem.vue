@@ -76,11 +76,10 @@ input::before {
     background: #FFF;
 }
 
-input:checked::before {
-    content: "";
-    background: grey;
+input:checked:before {
+    background: black;
 
- } 
+}
 
 .done {
     text-decoration: line-through;
