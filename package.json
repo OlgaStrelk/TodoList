@@ -6,7 +6,6 @@
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
     "predeploy": "npm run build",
-    "deploy": "gh-pages -d dist",
     "deploy": "node scripts/gh-pages-deploy.js"
   },
   "repository": {

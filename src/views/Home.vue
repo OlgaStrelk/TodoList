@@ -3,7 +3,7 @@
         <h2>Home page</h2>
         <p>Welcome to the Todo List. It's a simple application with which you will never forget what you postpone to do
         </p>
-        <router-link to="/tasks">Try the app</router-link>
+        <router-link to="/TodoList/tasks">Try the app</router-link>
     </div>
 </template>
 
