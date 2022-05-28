@@ -1,9 +1,10 @@
 <template>
     <div>
         <h2 class="app-title">Todo List</h2>
-        <router-link to="/">Home</router-link>
+        <router-link to="/" class="link">Home</router-link>
         <AddTask @add-task="addTask" />
-        <TodoList v-bind:todos="posts" @remove-task="removeTask" />
+        <TodoList v-if="posts.length" v-bind:todos="posts" @remove-task="removeTask" />
+        <p v-else>Кажется, ваши дела закончились. <br />Добавьте новые и&nbsp;отдохните.</p>
     </div>
 </template>
 
@@ -20,7 +21,7 @@ export default {
         }
     },
     mounted() {
-        fetch('https://jsonplaceholder.typicode.com/todos?_limit=15')
+        fetch('https://jsonplaceholder.typicode.com/todos?_limit=5')
             .then(response => response.json())
             .then(json => { this.posts = json })
     },
@@ -38,3 +39,13 @@ export default {
     }
 }
 </script>
+
+<style>
+.link {
+    margin-left: 5px;
+}
+
+p {
+    text-align: center;
+}
+</style>
