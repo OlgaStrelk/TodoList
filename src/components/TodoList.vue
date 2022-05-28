@@ -26,7 +26,7 @@ export default {
 <style scoped>
 .list {
     list-style: none;
-    margin: 20px auto;
+    margin: 10px auto;
     padding: 0;
     max-width: 400px;
     align-self: center;
