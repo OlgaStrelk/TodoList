@@ -1,7 +1,7 @@
 <template>
     <div>
         <h2 class="app-title">Todo List</h2>
-        <router-link to="/TodoList/" class="link">Home</router-link>
+        <router-link to="/" class="link">Home</router-link>
         <AddTask @add-task="addTask" />
         <select v-model="filter" class="filter">
             <option value="all">Все</option>
