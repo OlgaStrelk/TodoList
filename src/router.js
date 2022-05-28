@@ -1,5 +1,20 @@
-import Vue from 'vue'
-import Router from 'vue-router'
+import { createWebHistory, createRouter } from "vue-router";
+import Home from "@/views/Home.vue";
 
-Vue.useAttrs(Router)
-export default new Router ({})
+const routes = [
+  {
+    path: "/",
+    component: Home,
+  },
+  {
+    path: "/tasks",
+    component: () => import('./views/Todos.vue')
+  },
+];
+
+const router = createRouter({
+  history: createWebHistory(),
+  routes,
+});
+
+export default router;
