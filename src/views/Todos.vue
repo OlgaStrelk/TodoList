@@ -74,9 +74,18 @@ export default {
 </script>
 
 <style>
-.link {
-    margin-left: 5px;
+
+.app-title {
+  font-weight: 900;
+  font-size: 40px;
+  text-align: center;
+  margin-top: 40px;
+  margin-bottom: 20px;
 }
+
+/* .link {
+    
+} */
 
 .filter {
     margin-top: 10px;
