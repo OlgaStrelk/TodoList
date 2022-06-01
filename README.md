@@ -9,6 +9,8 @@
 
 [Демоверсия проекта](https://olgastrelk.github.io/TodoList/)
 
+# Todo List
+
 SPA bootstrapped with VUE CLI.
 Includes two screens, the first of which is a description of the application (Home screen), and the second is a simple and clear interactive list in use, with the ability to add and remove tasks, as well as sort which of them are solved and which are not yet.
 ##### scroll down for english version
